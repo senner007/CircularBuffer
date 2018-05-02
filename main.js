@@ -13,7 +13,7 @@ function circularBuffer (cblength) {
             }).join("\n")
         },
         showSorted: function () {
-            return arr.slice(0).sort().map(function (v, i) {
+            return arr.slice(0).sort((a, b) => a - b).map(function (v, i) {
                 return "index " + i + ": " + v
             }).join("\n")
         }
